@@ -1,0 +1,16 @@
+name: Github Action - Push General
+run-name: Running - ${{ github.event_name }}
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths:
+      - '**.txt'
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentario
+        run: |
+          echo "Comentario PUSH WORKSFLOW"
