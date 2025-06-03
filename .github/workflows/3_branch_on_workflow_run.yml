@@ -3,7 +3,7 @@ run-name: Running - Workflow Run Branches
 on: 
   workflow_run:
     workflows: [GitHub Actions - Trigger 1]
-    branches: [master]
+    branches: [main]
 jobs:
   on-push:
     runs-on: ubuntu-latest
