@@ -1,0 +1,21 @@
+name: GitHub Actions _ Workflow dispatch Template - Choice
+run-name: Running - ${{ github.event_name }}
+on: 
+    workflow_dispatch:
+      inputs:
+        tags:
+          description: Selecione a Tag
+          type: choice
+          options: 
+            - tag_1
+            - tag_2
+            - tag_3
+          default: 'tag_1'
+          required: true
+jobs:
+  on_workflow_dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentario
+        run: |
+          echo "Comentario workflow dispatch - ${{ inputs.tags }}"
