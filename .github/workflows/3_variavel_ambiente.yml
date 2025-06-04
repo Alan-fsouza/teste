@@ -1,0 +1,16 @@
+name: GitHub Actions - Condiguracao de Secret de repositorio
+run-name: Running -  Secret Repo COnfig
+on: [push, workflow_dispatch]
+env:
+  variavel: "Bom dia!"
+  var_1: ${{ secrets.test_secret }}"
+  var_2: ${{ vars.var_test }}"
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentario
+        run: |
+          echo "$variavel"
+          echo "$var_1"
+          echo "$var_2"
