@@ -9,14 +9,14 @@ jobs:
          run: |
            echo "Execucao Unit"
    test-api:
-     needs: test_unit
+     needs: test-unit
      runs-on: ubuntu-latest
      steps:
        - name: Comentario
          run: |
            echo "Execucao API"   
    test-ui:
-     needs: [test_unit, test-api]
+     needs: [test-unit, test-api]
      runs-on: ubuntu-latest
      steps:
        - name: Comentario
