@@ -12,4 +12,15 @@ jobs:
       - name: Comentario
         run: |
           echo Comentario após do erro
+  job_2_always:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentario
+        run: |
+          echo Comentario antes do erro
+          exit 1
+      - name: Comentario
+        if: always()
+        run: |
+          echo Comentario após do erro
   
