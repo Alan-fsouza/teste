@@ -9,7 +9,7 @@ jobs:
          run: |
            echo "Execucao Unit"
    test-api:
-     needs: test-unit
+     #needs: test-unit
      runs-on: ubuntu-latest
      steps:
        - name: Comentario
